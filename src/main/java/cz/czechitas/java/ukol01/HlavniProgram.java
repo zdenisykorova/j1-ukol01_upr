@@ -267,7 +267,7 @@ public void nakresliE2() {
     nakresliD();
     zofka.penUp();
     zofka.turnLeft(135);
-    zofka.move(40);
+    zofka.move(45);
     zofka.turnLeft(90);
     zofka.move(20);
     nakresliE();

@@ -62,14 +62,35 @@ public class HlavniProgram {
       zofka.turnRight(5);
       zofka.move(4);
     }
-
   }
 
+ public void nakresliObrazce() {
+   zofka.penUp();
+   zofka.turnRight(45);
+   zofka.move(80);
+   zofka.penDown();
+   //osmiúhelník
+   for (int i = 0; i < 8 ; i++) {
+     zofka.move(20);
+     zofka.turnRight(45);
+     zofka.move(20);
+   }
+   zofka.penUp();
+   zofka.move(120);
+   zofka.penDown();
+   nakresliKruh();
+   zofka.penUp();
+   zofka.turnLeft(20);
+   zofka.move(110);
+   zofka.penDown();
+   nakresliKruh();
+ }
 
   public void start() {
     zofka = new Turtle();
 
     //TODO implementace domácího úkolu
     nakresliPrasatko();
+    nakresliObrazce();
   }
 }

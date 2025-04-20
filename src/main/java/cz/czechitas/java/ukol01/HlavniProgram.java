@@ -194,7 +194,7 @@ public void nakresliMensiPaprsky() {
     //zofka kreslí slunce
     zofka.penUp();
     zofka.turnRight(135);
-    zofka.move(520);
+    zofka.move(515);
     zofka.turnRight(90);
     zofka.move(200);
     zofka.penDown();

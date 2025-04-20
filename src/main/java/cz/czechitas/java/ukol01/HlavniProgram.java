@@ -38,7 +38,7 @@ public class HlavniProgram {
     }
 
   public void nakresliPrasatko()  {
-    zofka.turnLeft(90);
+
     nakresliDomecek();
     zofka.turnRight(135);
     zofka.penUp();
@@ -64,6 +64,13 @@ public class HlavniProgram {
     }
   }
 
+  public void nakresliMalyKruh() {
+    for (int i = 0; i < 72; i++) {
+      zofka.turnRight(5);
+      zofka.move(1);
+    }
+  }
+
   public void nakresliPaprsky() {
     zofka.penDown();
     zofka.turnLeft(90);
@@ -77,6 +84,20 @@ public class HlavniProgram {
       zofka.turnRight(4);
     }
   }
+
+public void nakresliMensiPaprsky() {
+  zofka.penDown();
+  zofka.turnLeft(90);
+  zofka.move(5);
+  zofka.penUp();
+  zofka.turnRight(180);
+  zofka.move(5);
+  zofka.turnLeft(90);
+  for (int i = 0; i < 7; i++) {
+    zofka.move(1);
+    zofka.turnRight(4);
+  }
+}
 
  public void nakresliObrazce() {
    zofka.penUp();
@@ -103,11 +124,83 @@ public class HlavniProgram {
    }
  }
 
+ public void nakresliSlunce () {
+   nakresliMalyKruh();
+   for (int i = 0; i < 13; i++) {
+   nakresliMensiPaprsky();
+   }
+ }
+
+
+
   public void start() {
     zofka = new Turtle();
 
     //TODO implementace domácího úkolu
+
+    //posun žofky níž
+    zofka.penUp();
+    zofka.turnLeft(180);
+    zofka.move(60);
+    zofka.turnRight(90);
+    zofka.penDown();
+
     nakresliPrasatko();
-    nakresliObrazce();
-  }
+    //nakresliObrazce();
+
+    //posun žofky na kreslení domečku 1
+    zofka.penUp();
+    zofka.turnRight(180);
+    zofka.move(200);
+    zofka.turnRight(45);
+    zofka.move(200);
+    zofka.penDown();
+    zofka.turnRight(90);
+    nakresliDomecek();
+
+    //posun k domečku 2
+    zofka.penUp();
+    zofka.turnRight(135);
+    zofka.move(100);
+    zofka.turnRight(90);
+    zofka.move(65);
+    zofka.penDown();
+    nakresliDomecek();
+
+    //malé sluníčko v rohu
+
+
+    //žofka se vydává nakreslit domečky v řadě
+    for (int i = 0; i < 4; i++) {
+    zofka.penUp();
+    zofka.turnRight(45);
+    zofka.move(100);
+    zofka.turnLeft(90);
+    zofka.move(30);
+    zofka.turnLeft(90);
+    zofka.penDown();
+    nakresliDomecek();
+    }
+    //žofka kreslí poslední domeček
+    zofka.penUp();
+    zofka.turnRight(45);
+    zofka.move(265);
+    zofka.turnRight(90);
+    zofka.move(100);
+    zofka.turnRight(90);
+    zofka.penDown();
+    nakresliDomecek();
+
+    //zofka kreslí slunce
+    zofka.penUp();
+    zofka.turnRight(135);
+    zofka.move(520);
+    zofka.turnRight(90);
+    zofka.move(200);
+    zofka.penDown();
+    nakresliSlunce();
+      }
+
+
+
 }

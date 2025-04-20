@@ -64,6 +64,20 @@ public class HlavniProgram {
     }
   }
 
+  public void nakresliPaprsky() {
+    zofka.penDown();
+    zofka.turnLeft(90);
+    zofka.move(15);
+    zofka.penUp();
+    zofka.turnRight(180);
+    zofka.move(15);
+    zofka.turnLeft(90);
+    for (int i = 0; i < 7; i++) {
+      zofka.move(3);
+      zofka.turnRight(4);
+    }
+  }
+
  public void nakresliObrazce() {
    zofka.penUp();
    zofka.turnRight(45);
@@ -84,6 +98,9 @@ public class HlavniProgram {
    zofka.move(110);
    zofka.penDown();
    nakresliKruh();
+   for (int i = 0; i < 13; i++) {
+     nakresliPaprsky();
+   }
  }
 
   public void start() {

@@ -131,8 +131,70 @@ public void nakresliMensiPaprsky() {
    }
  }
 
+public void nakresliZ() {
+    zofka.penUp();
+    zofka.move(40);
+    zofka.turnRight(90);
+    zofka.penDown();
+    zofka.move(20);
+    zofka.turnRight(135);
+    zofka.move(50);
+    zofka.turnRight(225);
+    zofka.move(20);
+}
 
+public void nakresliD() {
+    zofka.penDown();
+    zofka.move(35);
+    zofka.turnRight(135);
+    zofka.move(25);
+    zofka.turnRight(90);
+    zofka.move(25);
+    zofka.penUp();
+    zofka.move(30);
+}
 
+public void nakresliE() {
+    zofka.penDown();
+    zofka.move(38);
+    zofka.turnRight(90);
+  for (int i = 0; i < 2; i++) {
+    nakresliE2();
+  }
+   zofka.move(20);
+    }
+
+public void nakresliE2() {
+  //část znaku E
+  zofka.move(20);
+  zofka.turnRight(180);
+  zofka.penUp();
+  zofka.move(20);
+  zofka.turnLeft(90);
+  zofka.move(18);
+  zofka.turnLeft(90);
+  zofka.penDown();
+}
+
+  public void nakresliN () {
+    zofka.penDown();
+    zofka.move(38);
+    zofka.turnRight(135);
+    zofka.move(50);
+    zofka.turnLeft(135);
+    zofka.move(38);
+    zofka.penUp();
+    zofka.turnLeft(180);
+    zofka.move(38);
+  }
+
+  public void nakresliI() {
+    zofka.penDown();
+    zofka.move(38);
+    zofka.turnRight(180);
+    zofka.penUp();
+    zofka.move(38);
+  }
   public void start() {
     zofka = new Turtle();
 
@@ -191,12 +253,38 @@ public void nakresliMensiPaprsky() {
     zofka.penDown();
     nakresliDomecek();
 
-    //zofka kreslí slunce
+    //napiš jméno Zdeni
     zofka.penUp();
     zofka.turnRight(135);
-    zofka.move(515);
-    zofka.turnRight(90);
-    zofka.move(200);
+    zofka.move(400);
+    zofka.turnLeft(90);
+    zofka.move(150);
+    zofka.turnLeft(180);
+    nakresliZ();
+    zofka.penUp();
+    zofka.move(20);
+    zofka.turnLeft(90);
+    nakresliD();
+    zofka.penUp();
+    zofka.turnLeft(135);
+    zofka.move(40);
+    zofka.turnLeft(90);
+    zofka.move(20);
+    nakresliE();
+    zofka.penUp();
+    zofka.move(15);
+    zofka.turnLeft(90);
+    nakresliN();
+    zofka.turnLeft(90);
+    zofka.move(15);
+    zofka.turnLeft(90);
+    nakresliI();
+
+    //zofka kreslí slunce
+    zofka.turnRight(180);
+    zofka.move(325);
+    zofka.turnLeft(90);
+    zofka.move(230);
     zofka.penDown();
     nakresliSlunce();
       }

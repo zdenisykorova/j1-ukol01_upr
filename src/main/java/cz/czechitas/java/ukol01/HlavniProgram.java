@@ -132,6 +132,19 @@ public class HlavniProgram {
         }
     }
 
+    public void nakresliSlunceLepe() {
+        for (int i = 0; i < 45; i++) {
+            zofka.turnRight(5);
+            zofka.move(8);
+            zofka.turnRight(90);
+            zofka.move(10);
+            zofka.penUp();
+            zofka.turnRight(180);
+            zofka.move(10);
+            zofka.penDown();
+        }
+    }
+
     public void nakresliZ() {
         zofka.penUp();
         zofka.move(40);
@@ -286,6 +299,7 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(230);
         zofka.penDown();
-        nakresliSlunce();
+        //nakresliSlunce(); //původní
+        nakresliSlunceLepe();
     }
 }

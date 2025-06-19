@@ -86,6 +86,25 @@ public class HlavniProgram {
         }
     }
 
+    public void nakresliSlunceZnovu() {
+        zofka.penDown();
+        for (int i = 0; i < 14; i++) {
+            for (int a = 0; a < 5; a++) {
+                zofka.move(5);
+                zofka.turnRight(5);
+            }
+            zofka.penDown();
+            zofka.turnLeft(90);
+            zofka.move(15);
+            zofka.penUp();
+            zofka.turnRight(180);
+            zofka.move(15);
+            zofka.turnLeft(90);
+            zofka.penDown();
+        }
+            zofka.move(3);
+    }
+
     public void nakresliMensiPaprsky() {
         zofka.penDown();
         zofka.turnLeft(90);
@@ -131,19 +150,19 @@ public class HlavniProgram {
             nakresliMensiPaprsky();
         }
     }
-
-    public void nakresliSlunceLepe() {
-        for (int i = 0; i < 45; i++) {
-            zofka.turnRight(5);
-            zofka.move(8);
-            zofka.turnRight(90);
-            zofka.move(10);
-            zofka.penUp();
-            zofka.turnRight(180);
-            zofka.move(10);
-            zofka.penDown();
-        }
-    }
+    //tragický pokus o lepší slunce v obrázku, který nevyšel
+    //public void nakresliSlunceLepe() {
+    //for (int i = 0; i < 45; i++) {
+    //zofka.turnRight(5);
+    //zofka.move(8);
+    //zofka.turnRight(90);
+    //zofka.move(10);
+    //zofka.penUp();
+    //zofka.turnRight(180);
+    //zofka.move(10);
+    //zofka.penDown();
+    //}
+    //}
 
     public void nakresliZ() {
         zofka.penUp();
@@ -214,6 +233,8 @@ public class HlavniProgram {
         zofka = new Turtle();
 
         //TODO implementace domácího úkolu
+        //revize úkolu 1
+        nakresliSlunceZnovu();
 
         //posun žofky níž
         zofka.penUp();
@@ -299,7 +320,7 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(230);
         zofka.penDown();
-        //nakresliSlunce(); //původní
-        nakresliSlunceLepe();
+        nakresliSlunce(); //původní
+        //nakresliSlunceLepe(); //novější tragický pokus
     }
 }

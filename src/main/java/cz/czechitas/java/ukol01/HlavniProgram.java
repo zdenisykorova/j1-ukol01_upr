@@ -102,7 +102,7 @@ public class HlavniProgram {
             zofka.turnLeft(90);
             zofka.penDown();
         }
-            zofka.move(3);
+        zofka.move(3);
     }
 
     public void nakresliMensiPaprsky() {

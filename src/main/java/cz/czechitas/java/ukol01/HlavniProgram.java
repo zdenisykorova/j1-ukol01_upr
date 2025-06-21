@@ -229,12 +229,17 @@ public class HlavniProgram {
         zofka.move(38);
     }
 
+    public void posunNaPismeno() {
+        zofka.penUp();
+        zofka.move(20);
+    }
+
     public void start() {
         zofka = new Turtle();
 
         //TODO implementace domácího úkolu
         //revize úkolu 1
-        nakresliSlunceZnovu();
+        //nakresliSlunceZnovu();
 
         //posun žofky níž
         zofka.penUp();
@@ -287,8 +292,8 @@ public class HlavniProgram {
         zofka.penDown();
         nakresliDomecek();
 
-        //napiš jméno Zdeni
-        zofka.penUp();
+        //napiš jméno Zdeni - původní zpracování
+        /*zofka.penUp();
         zofka.turnRight(135);
         zofka.move(400);
         zofka.turnLeft(90);
@@ -312,7 +317,25 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         zofka.move(15);
         zofka.turnLeft(90);
+        nakresliI();*/
+
+        //zofka píše znovu Zdeni - revize úkolu 2
+        zofka.penUp();
+        zofka.turnRight(135);
+        zofka.move(400);
+        zofka.turnLeft(90);
+        zofka.move(150);
+        zofka.turnLeft(180);
+        nakresliZ();
+        posunNaPismeno();
+        nakresliD();
+        posunNaPismeno();
+        nakresliE();
+        posunNaPismeno();
+        nakresliN();
+        posunNaPismeno();
         nakresliI();
+
 
         //zofka kreslí slunce
         zofka.turnRight(180);
